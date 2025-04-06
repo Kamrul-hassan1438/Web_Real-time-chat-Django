@@ -1,6 +1,0 @@
-Set-ExecutionPolicy RemoteSigned -Scope Process
-
-env\scripts\activate
-
-cd ChatApp
-python manage.py runserver
