@@ -4,7 +4,6 @@ import Chat from "./Chat";
 function App() {
   const [currentUser, setCurrentUser] = useState("");
   const [password, setPassword] = useState("");
-  const [recipient, setRecipient] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = async () => {
@@ -20,7 +19,7 @@ function App() {
             password: password,
           }),
         });
-  
+
         if (response.ok) {
           setIsLoggedIn(true);
         } else {
@@ -34,7 +33,6 @@ function App() {
       alert("Please fill in both username and password.");
     }
   };
-  
 
   return (
     <div>
@@ -58,13 +56,7 @@ function App() {
       ) : (
         <div>
           <h2>Welcome, {currentUser}</h2>
-          <input
-            type="text"
-            value={recipient}
-            onChange={(e) => setRecipient(e.target.value)}
-            placeholder="Enter recipient's username"
-          />
-          <Chat currentUser={currentUser} recipient={recipient} />
+          <Chat currentUser={currentUser} />
         </div>
       )}
     </div>
