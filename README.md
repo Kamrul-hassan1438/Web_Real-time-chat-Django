@@ -19,7 +19,7 @@ This repository contains a **full-stack real-time chat application** built with 
 
 | Frontend       | Backend              | Real-Time Protocol     | Database    | Channel Layer  |
 |----------------|----------------------|-----------------------|-------------|----------------|
-| React          | Django + Django Channels | WebSockets            | PostgreSQL (or SQLite) | Redis          |
+| React          | Django + Django Channels | WebSockets            | SQLite  | Redis          |
 
 ---
 
